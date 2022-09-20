@@ -17,7 +17,7 @@ body {
 }
 .inputPlace input {
   padding: 15px;
-  width: 300px;
+  width: 380px;
   outline: none;
   background: transparent;
   border: 1.5px solid white;
@@ -26,11 +26,23 @@ body {
   color: white;
   position: relative;
 }
-.inputPlace input:focus, .inputPlace input:valid {
+.inputPlace input:focus {
   border-color: rgb(118, 255, 255);
 }
-.inputPlace input:focus ~ label, .inputPlace input:valid ~ label {
-  color: aqua;
+.inputPlace input:focus.valid {
+  border-color: #32ff7e;
+}
+.inputPlace input:focus.valid ~ label {
+  color: #32ff7e;
+}
+.inputPlace input:focus.invalid {
+  border-color: #ff4d4d;
+}
+.inputPlace input:focus.invalid ~ label {
+  color: #ff4d4d;
+}
+.inputPlace input:focus ~ label {
+  color: rgb(118, 255, 255);
   font-size: 15px;
   top: -10px;
   left: 15px;
@@ -44,4 +56,12 @@ body {
   background: rgb(44, 44, 44);
   padding: 0px 10px 0px 10px;
   transition: all 0.2s ease;
+}
+
+p {
+  color: white;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */

@@ -1,50 +1,70 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: rgb(44, 44, 44);
-    font-family: Poppins;
+$WrongColor: #ff4d4d;
+$CorrectColor: #32ff7e;
+$MainColor: rgb(118, 255, 255);
+
+body {
+  background: rgb(44, 44, 44);
+  font-family: Poppins;
 }
 
-.inputPlace{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    input{
-        padding: 15px;
-        width: 300px;
-        outline: none;
-        background: transparent;
-        border:1.5px solid white;
-        border-radius: 10px;
-        font-size: 20px;
-        color: white;
-        position: relative;
-        &:focus,
-        &:valid{
-            border-color: rgb(118, 255, 255);
-            ~ label{
-                color: aqua;
-                font-size: 15px;
-                top: -10px;
-                left: 15px;
-            }
+.inputPlace {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  input {
+    padding: 15px;
+    width: 380px;
+    outline: none;
+    background: transparent;
+    border: 1.5px solid white;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    &:focus {
+      border-color: $MainColor;
+      &.valid {
+        border-color: $CorrectColor;
+        ~ label {
+          color: $CorrectColor;
         }
+      }
+      &.invalid {
+        border-color: $WrongColor;
+        ~ label {
+          color: $WrongColor;
+        }
+      }
+      ~ label {
+        color: $MainColor;
+        font-size: 15px;
+        top: -10px;
+        left: 15px;
+      }
     }
-    label{
-        position: absolute;
-        top: 13px;
-        left: 10px;
-        color: white;
-        font-size: 20px;
-        background:rgb(44, 44, 44);
-        padding: 0px 10px 0px 10px;
-        transition: all 0.2s ease;
-
-
-    }
+  }
+  label {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    background: rgb(44, 44, 44);
+    padding: 0px 10px 0px 10px;
+    transition: all 0.2s ease;
+  }
+}
+p {
+  color: white;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
