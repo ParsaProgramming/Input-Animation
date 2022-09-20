@@ -7,5 +7,3 @@ in this project I could use valid selector in Sass but I didn't. I create it my 
 - create the graphic of acceptable and not acceptable username.
 - create the animation of label
 
-## preview
-
