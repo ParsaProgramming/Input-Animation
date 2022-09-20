@@ -26,6 +26,15 @@ body {
   color: white;
   position: relative;
 }
+.inputPlace input:focus, .inputPlace input:valid {
+  border-color: rgb(118, 255, 255);
+}
+.inputPlace input:focus ~ label, .inputPlace input:valid ~ label {
+  color: aqua;
+  font-size: 15px;
+  top: -10px;
+  left: 15px;
+}
 .inputPlace label {
   position: absolute;
   top: 13px;
